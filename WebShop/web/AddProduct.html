@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Eisbooks </title>
+<link href="css/StyleUpdate.css" rel="Stylesheet" type="text/css">
+</head>
+<body>
+<div class="main">
+	 <div class="top">
+	
+		  <h1> EISBOOKS.COM</h1>
+	 </div>
+	 <div class="navigation">
+		 <ul>
+		 <li><a href="AddProduct.html">Adding </a></li>
+		 <li><a href="GetProductController">Delete or update</a></li>
+                   <li><a href="LogoutController">Exit</a></li>
+		 </ul>
+	 </div>
+	 <div class="midle">
+	<h2> Adding products </h2>
+		<div class="reg">
+		<h2 id="titleReg"> Product </h2>
+                <form action="AddProductController" name="addProduct" method="post" onSubmit="return check(event);"> 
+			<input type="text" name="name" placeholder="Name">
+			<input type="number" name="price" placeholder="Price">
+			<input type="number" name="barcode" placeholder="Barcode">
+			<input type="text" name="author" placeholder="Author">
+                        <input type="text" name="description" placeholder="Description">
+                        <input type="text" name="image" placeholder="Image">
+			<span style="color:white; font-size:18px"> Category: </span>
+                        <select name="category">
+                <option value="1"> Textbooks</option>
+                <option value="2"> Kids' Books</option>
+                <option value="3"> Teens' Books</option>
+                <option value="4">History Books</option>
+                <option value="5"> Science Fiction & Fantasy Books</option>
+				<option value="6"> Toys & Games</option>
+				<option value="7"> Home & Gifts</option>
+            </select><br>
+			<input type="number" name="quantity" placeholder="Quantity">
+			<input type="submit" value="Save" style="height:30px; width:100px">
+		</form>
+		</div>
+		
+
+		
+	</div>
+	 <div class="bottom">
+	<p>Design by Aleksandar Stosic/ita16.aleksandarstosic</p>
+	 </div>
+</div>
+
+<script type="text/javascript">
+function check(event){
+ event.preventDefault();
+  if(document.addProduct.name.value==="" || document.addProduct.price.value ==="" ||
+  document.addProduct.barcode.value ==="" ||  document.addProduct.author.value ==="" || document.addProduct.description.value ==="" || document.addProduct.quantity.value ==="" || document.addProduct.image.value ===""){
+  alert("You must fill all data!!!");
+	} else {
+	document.addProduct.submit();
+	}
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Registration </title>
+<link href="css/styleReg.css" rel="Stylesheet" type="text/css">
+</head>
+<body>
+<div class="main">
+	 <div class="top">
+		
+		  <h1> EISBOOKS.COM </h1>
+	 </div>
+	 <div class="navigation">
+		 <ul>
+		 <li><a href="CategoryController">HOME</a></li>
+		 <li><a href="AboutUs.html">ABOUT US</a></li>
+		 <li><a href="Questions.html">QUESTIONS</a></li>
+		 <li><a href="Contact.html">CONTACT</a></li>
+		 </ul>
+	 </div>
+	 <div class="midle">
+	<h2> Registration </h2>
+	
+		<div class="reg">
+		<h2 id="titleReg"> Client </h2>
+		<h3>You must fill all data for a successful registration</h3>
+                <form action="registrationController" name="individualReg" method="post" onSubmit="return check(event);"> 
+			<input type="text" name="firstName" placeholder="First name"> 
+			<input type="text" name="lastName" placeholder="Last name">
+			<input type="text" name="username" placeholder="Username">
+			<input type="text" name="address" placeholder="Address">
+			<input type="text" name="phone" placeholder="Phone number">
+			<input type="text" name="country" placeholder="Country">
+			<input type="text" name="city" placeholder="City">
+			<input type="text" name="email" placeholder="E-mail">
+			<input type="text" name="personalNumber" placeholder="Personal number">
+            <input type="text" name="accountNumber" placeholder="Credit card number">;<img src="images/card.jpg" alt="card" align ="left";>
+			<input type="password" name="password" placeholder="Password">
+			<input type="submit" value="Save" style="height:30px; width:200px">
+		</form>
+		</div>
+		
+
+		
+	</div>
+	 <div class="bottom">
+	 <p> Design by Aleksandar Stosic/ita16.aleksandarstosic </p>
+	 </div>
+</div>
+
+<script type="text/javascript">
+function check(event){
+ event.preventDefault();
+  if(document.individualReg.firstName.value==="" || document.individualReg.lastName.value ==="" ||
+  document.individualReg.username.value ==="" ||  document.individualReg.personalNumber.value ==="" || document.individualReg.address.value ==="" || document.individualReg.phone.value ===""  || document.individualReg.city.value ===""  || document.individualReg.email.value ==="" || document.individualReg.password.value ==="" || document.individualReg.phone.value ===""  || document.individualReg.city.value ===""  || document.individualReg.email.value ==="" || document.individualReg.accountNumber.value ===""){
+  alert("You must enter all data!!!");
+	} else {
+	document.individualReg.submit();
+	}
+}
+
+
+
+</script>
+</body>
+</html>
